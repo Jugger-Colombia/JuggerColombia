@@ -1,4 +1,5 @@
 import React, {  useEffect } from "react";
+import logo from "../jugger_logo.svg"
 
 const NAVS = {
     nosotros: "#nosotros" ,
@@ -27,7 +28,12 @@ const NavBar = () =>{
     return(
         <header className="App-header">
             <nav>
-                <a href="" className="logo">Jugger Colombia</a>
+                <div className="jugger_logo">
+                    <figure >
+                        <img  src={logo} alt="Jugger Colombia Logo"/>
+                    </figure>
+                    <a href="" className="logo">Jugger Colombia</a>
+                </div>
                 <NavBarItemsList >
                     {navs_list}
                 </NavBarItemsList>

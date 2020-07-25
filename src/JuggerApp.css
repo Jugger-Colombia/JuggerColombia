@@ -40,8 +40,27 @@ nav .logo{
   font-size: 30px;
   color : #fff;
   text-decoration:none;
-  margin-left:5%;
+  align-self: center;
 }
+
+.jugger_logo {
+  display: flex;
+}
+.App-header .jugger_logo figure{
+  max-width: 10%;
+}
+
+.jugger_logo figure{
+  background-color: white;
+  border-radius: 5%;
+  margin: 0 10px 0 10%;
+  display: grid;
+  place-items: center;
+}
+.jugger_logo img{
+  width: 100%;
+}
+
 
 .banner{
   /* margin-top: 100px; */
@@ -98,9 +117,49 @@ nav.sticky{
   background: var(--dark-gray);
 }
 
-.icons span{
+/** ICONS */
+
+.icons span:before{
   color: white;
-  font-size: 30px;
-  height: 70px;
-  width: 70px;
+  font-family: Flaticon;
+  font-size: 130px;
+}
+.icons a{
+  display: inline;
+  border-radius: 100%;
+}
+.icons i:before{
+  border-radius: 100%;
+  color: white;
+  background: red;
+  overflow: hidden;
+  font-family: Flaticon;
+  font-size: 130px;
+  text-decoration: none;
+}
+/**FOOTER **/
+.down-index{
+  background: var(--gray);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  padding: 2% 10%;
+}
+
+.down-index section{
+  border-left: solid 1px white;
+  /* grid-auto-rows: auto;
+  display: grid;
+  align-items: center; */
+  padding: 0 10%;
+}
+
+
+section h4,section h5, section h6{
+  color: white;
+}
+
+.rights {
+  text-align: center;
+  color: white;
 }
