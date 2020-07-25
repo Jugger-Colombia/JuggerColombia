@@ -25,6 +25,7 @@ const  Footer = () =>{
                 <section>
                     <div className="jugger_logo">
                         <figure >
+                            hola
                             <img  src={logo} alt="Jugger Colombia Logo"/>
                         </figure>
                     </div>
