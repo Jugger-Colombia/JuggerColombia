@@ -16,16 +16,16 @@ function JuggerApp() {
         <section class="header-icons-container">
 
       <div class="icons">
-          <a href="#"><span class="flaticon-001-facebook"></span></a>
-          <a href="#"><span class="flaticon-002-twitter"></span></a>
-          <a href="#"><span class="flaticon-011-instagram"></span></a>
-          <a href="#"><span class="flaticon-008-youtube"></span></a>
-          <a href="#"><span class="flaticon-010-linkedin"></span></a>
+          <a href="#test"><span class="flaticon-001-facebook"></span></a>
+          <a href="#test"><span class="flaticon-002-twitter"></span></a>
+          <a href="#test"><span class="flaticon-011-instagram"></span></a>
+          <a href="#test"><span class="flaticon-008-youtube"></span></a>
+          <a href="#test"><span class="flaticon-010-linkedin"></span></a>
           
-          <a href="#"><i class="flaticon-001-facebook"></i></a>
-          <a href="#"><i class="flaticon-002-twitter"></i></a>
-          <a href="#"><i class="flaticon-011-instagram"></i></a>
-          <a href="#"><i class="flaticon-008-youtube"></i></a>
+          <a href="#test"><i class="flaticon-001-facebook"></i></a>
+          <a href="#test"><i class="flaticon-002-twitter"></i></a>
+          <a href="#test"><i class="flaticon-011-instagram"></i></a>
+          <a href="#test"><i class="flaticon-008-youtube"></i></a>
       </div>
         </section>
         <Banner></Banner>

@@ -32,7 +32,7 @@ const NavBar = () =>{
                     <figure >
                         <img  src={logo} alt="Jugger Colombia Logo"/>
                     </figure>
-                    <a href="" className="logo">Jugger Colombia</a>
+                    <a href="#test" className="logo">Jugger Colombia</a>
                 </div>
                 <NavBarItemsList >
                     {navs_list}
