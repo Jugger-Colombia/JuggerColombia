@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/JuggerColombia/precache-manifest.e8d696bbd28d2cb222b2591b347f4d02.js"
+  "/JuggerColombia/precache-manifest.1a3d6f202db4a50ff035a9321f5ceb8a.js"
 );
 
 self.addEventListener('message', (event) => {
