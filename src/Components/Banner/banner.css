@@ -1,0 +1,40 @@
+.banner{
+ 
+    position: relative;
+    /* max-width: 1200px; */
+    /*   margin: auto; */
+    margin-top: 30px;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: grid;
+    place-items: center;
+
+    
+  }
+
+  
+.banner img{
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-position: center;
+  object-fit: cover;
+  /* background-size: cover; */
+  grid-column: 1;
+  grid-row: 1;
+  /* background-size: ; */
+}
+
+.banner .tag{
+  color: white;
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 90px;
+  font-weight: bold;
+  letter-spacing: 30px;
+  top: 20%;
+  text-shadow: -8px 10px 12px #000;
+}
+
+

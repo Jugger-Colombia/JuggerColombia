@@ -1,5 +1,6 @@
 import React, {  useEffect } from "react";
 import logo from "../jugger_logo.svg"
+import "./navbar.css";
 
 const NAVS = {
     nosotros: "#nosotros" ,
@@ -32,7 +33,7 @@ const NavBar = () =>{
                     <figure >
                         <img  src={logo} alt="Jugger Colombia Logo"/>
                     </figure>
-                    <a href="#test" className="logo">Jugger Colombia</a>
+                    <a href="#test" className="logo">JUGGER COLOMBIA</a>
                 </div>
                 <NavBarItemsList >
                     {navs_list}
@@ -54,7 +55,9 @@ const NavBarItemsList  = (props) =>{
 const NavBarItem = (props) => {
 
     return (
-        <li> <a href={`#${props.name}`}> {props.name}</a></li>
+        <li> 
+            <a href={`#${props.name}`}> {props.name}</a>
+        </li>
     )
 }
 
