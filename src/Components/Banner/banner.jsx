@@ -3,8 +3,8 @@ import "./banner.css"
 const Banner = () =>{
     return(
         <section className="banner">
-            <img src={`${process.env.PUBLIC_URL }/BANNER_WEB-HOME_JUGGER.jpg`} alt=""/>
-            <p class="tag">COLOMBIA</p>
+            <img src={`${process.env.PUBLIC_URL }/frontPage/RED_BANNER.jpg`} alt=""/>
+            <p className="tag">COLOMBIA</p>
         </section>
     )
 }
