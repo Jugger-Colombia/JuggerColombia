@@ -1,37 +1,36 @@
-import React from 'react';
+import React,{useEffect, useRef} from 'react';
 import INFO from './data';
 import './QQYellow.css'
 import './card.css';
+import { useState } from 'react';
 
 
 const QQYellow = () =>{
+    const ref = useRef();
+    const output = useOnScreen(ref,{threshold: 0.35});
+
+
     const QueEsJugger = INFO['jugger'].map(i => <p key={`jugger${i}`}>{i}</p>);
     const QueEsJuggerColombia= INFO['juggerColombia'].map(i => <p  key={`juggerColombia${i}`}>{i}</p>);
     
+    useEffect(() =>{
+        console.log({ref,output});
+    },[ref, output])
     return(
-        <section className="yellowSection">
-           
-            <div className="text-container">
-                <div className="text">
-                    {QueEsJugger}
+        <section ref={ref} className="stickyContainer">
+            <div className="sticky">
+                <div className="text-container">
+                    <div className="text-right">
+                        {QueEsJugger}
+                    </div>
+                    <div className="text-left">
+                        {QueEsJuggerColombia}
+                    </div>
+                </div>
+                <div className="card-content">
+                    <Card /> 
                 </div>
             </div>
-            <div className="text-container">
-                <div className="text right_text">
-                    {QueEsJuggerColombia}
-                </div>
-            </div>
-            
-            <figure className="img_right">
-                <img src={`${process.env.PUBLIC_URL }/frontPage/Yellow_1.png`} alt=""/>
-            </figure>
-
-            <figure className="img_left">
-                <img src={`${process.env.PUBLIC_URL }/frontPage/Yellow_2.png`} alt=""/>
-            </figure>
-
-            <Card  cardPlace='leftCard'/>
-            <Card  cardPlace='rightCard'/>
         </section>
     )
 }
@@ -40,7 +39,8 @@ const Card = (props) =>{
     const {cardPlace = ""} = props
     const bg1 = `url(${process.env.PUBLIC_URL }/frontPage/Yellow_1_FLT.png)`;
     const bg2 = `url(${process.env.PUBLIC_URL }/frontPage/Yellow_2_FLT.png)`;
-    console.log(props);
+
+
     return(
         <div className={`card ${cardPlace}`}>
             <div className="face front" style= {{background: bg1, backgroundSize: 'cover'}}>
@@ -53,5 +53,29 @@ const Card = (props) =>{
     )
 }
 
+function useOnScreen (ref,options){
+    const [visible, setVisible] = useState(false);
+   
+    useEffect(()=>{
+        const observer = new IntersectionObserver(
+            ([entry])=>{
+                console.log(entry.intersectionRatio);
+                setVisible(entry.isIntersecting);
+            }, options
+        );
+        
+        if(ref.current){
+            observer.observe(ref.current);
+        }
+
+        return () =>{
+            if(ref.current){
+                observer.unobserve(ref.current);
+            }
+        }
+    },[])
+
+    return  {ref, visible}
+}
 
 export default QQYellow;

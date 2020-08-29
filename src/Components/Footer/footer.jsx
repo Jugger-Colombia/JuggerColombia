@@ -4,7 +4,7 @@ import "./footer.css";
 
 const  Footer = () =>{
     return (
-        <section>
+        <section className="footer">
             <div className="down-index">
                 <section > 
                     <a href="#test" className="icon"><i className="flaticon-001-facebook"></i> @Juggercolombia</a>
