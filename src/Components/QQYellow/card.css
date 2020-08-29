@@ -1,12 +1,10 @@
 
 .card{
     --perspective: 500px;
-    /*  max-height: 800px; */
-    /*  max-width: 800px; */
     position: absolute;
     top: -10%;
-    left: 50%;
-    height: 120%;
+    left: 0;
+    height: 110%;
     width: 50%;
     margin: 2%;
     transform-style: preserve-3d;
@@ -16,6 +14,9 @@
     transition: 1s ease-in;
 }
 
+.card.right{
+    left: 50%;
+}
 
 
 .card .face{
@@ -30,6 +31,7 @@
     backface-visibility: hidden;
     transition: 2s ease-in-out;
     transform: perspective(var(--perspective)) rotateY(0deg);
+    border-radius: 5%;
 }
 
 .card .face:after{
@@ -49,10 +51,6 @@
     background: #ff0;
     color: #fff;    
 }
-.card:hover .face.front{
-   
-    transform: perspective(var(--perspective))  rotateY(180deg);
-}
 
 .card .face.back{
     background: #3bc2ff;
@@ -60,16 +58,22 @@
     transform: perspective(var(--perspective))  rotateY(180deg);
 }
 
+/* .card:hover .face.front{
+    transform: perspective(var(--perspective))  rotateY(180deg);
+}
+.card:hover{
+    left:50%;
+}
+
 .card:hover .face.back{
     transform: perspective(var(--perspective)) rotateY(360deg);
-}
+} */
 
 .card .face h2{
     font-size: 4em;
     text-transform: uppercase;
     text-align: center;
-    padding: 11%;
+    padding: 15%;
     transform: perspective(var(--perspective)) translateZ(50px);
     text-shadow: 0 0 10px var(--gray) ,0 0 15px var(--gray) , 0 0 20px var(--gray);
-
 }

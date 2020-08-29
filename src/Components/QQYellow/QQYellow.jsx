@@ -6,18 +6,28 @@ import { useState } from 'react';
 
 
 const QQYellow = () =>{
-    const ref = useRef();
-    const output = useOnScreen(ref,{threshold: 0.35});
-
+    const [ref,setRef] = useState(null);
+    const [cardPlace, setCardPlace] = useState('');
+    const output = useOnScreen(ref,{ rootMargin: '30%'});
 
     const QueEsJugger = INFO['jugger'].map(i => <p key={`jugger${i}`}>{i}</p>);
     const QueEsJuggerColombia= INFO['juggerColombia'].map(i => <p  key={`juggerColombia${i}`}>{i}</p>);
     
     useEffect(() =>{
-        console.log({ref,output});
-    },[ref, output])
+        const {ref, visible ,threshold} = output ;/**Trigger */ 
+        if (ref){
+            console.log(ref.scrollHeight||null);
+        }
+        if (visible){ 
+            setCardPlace('right')
+        }else{
+            setCardPlace('')
+        }
+        console.log({...output});
+    },[ref,output])
+
     return(
-        <section ref={ref} className="stickyContainer">
+        <section ref={setRef} className="stickyContainer">
             <div className="sticky">
                 <div className="text-container">
                     <div className="text-right">
@@ -28,7 +38,7 @@ const QQYellow = () =>{
                     </div>
                 </div>
                 <div className="card-content">
-                    <Card /> 
+                    <Card cardPlace={cardPlace}/> 
                 </div>
             </div>
         </section>
@@ -55,27 +65,28 @@ const Card = (props) =>{
 
 function useOnScreen (ref,options){
     const [visible, setVisible] = useState(false);
-   
+    const [threshold, setThreshold] = useState(0);
+
     useEffect(()=>{
         const observer = new IntersectionObserver(
             ([entry])=>{
-                console.log(entry.intersectionRatio);
                 setVisible(entry.isIntersecting);
+                setThreshold(entry.intersectionRatio);
             }, options
         );
         
-        if(ref.current){
-            observer.observe(ref.current);
+        if(ref){
+            observer.observe(ref);
         }
 
         return () =>{
-            if(ref.current){
-                observer.unobserve(ref.current);
+            if(ref){
+                observer.unobserve(ref);
             }
         }
     },[])
 
-    return  {ref, visible}
+    return  {ref, visible ,threshold}
 }
 
 export default QQYellow;

@@ -1,50 +1,38 @@
 
-/*EL AGRID DE 2x2 si tenias razOn de ser pendejo*/
 .stickyContainer{
     --deg: -23deg;
     width: 100vw;
     height: 200vh;
     position: relative;
     background: var(--dark-gray);
-    /* display: grid; */
-    /* place-items: start; */
-    /*  overflow: hidden; */
-    /* grid-template-columns: 50vw 50vw;
-    grid-template-rows: 100vh 100vh; */
 }
-
- 
-.stickyContainer:before{
+.stickyContainer:before,.stickyContainer:after{
     content: "";
     grid-column: 1;
     grid-row: 1 ;
     display: block;
-    top: 0;
     width: 100%;
     height: 30%;
     position: absolute;
     background: var(--gray);
-    z-index: 0;
+    z-index:0;
     transform: skew(0,var(--deg))
+}
+ 
+.stickyContainer:before{
+    top: 0;
 }
 
 .stickyContainer:after{
-    content: "";
-    grid-column: 1  ;
-    grid-row: 1 ;
-    display:block;
     bottom: 0;
-    width:100%;
-    height: 30%;
-    position: absolute;
-    background: var(--gray);
     z-index: 0;
-    transform: skew(0,var(--deg));
-    opacity: 0.3;
 }
+
+
 section.stickyContainer .sticky{
     position: sticky;
     top: 15%;
+    z-index: 1;
 }
 .floatOver{
     height: 100%;
@@ -58,6 +46,7 @@ section.stickyContainer .sticky{
     width: 100%;
     height: 75vh;
     background: var(--dark-yellow);
+    opacity: 0.8;
     overflow: hidden;
 }
 
@@ -66,26 +55,23 @@ section.stickyContainer .sticky{
     grid-row: 1;
     color : #fff;
     margin: 12%;
+    padding: 1%;
     max-height: 500px;
     overflow: auto;
     text-align: left;
     display: grid; 
     gap: 15px 0;
 }
-.stickyContainer div.a{
-    background: blue;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+
 .text-container .text-left {
     grid-column: 1;
     grid-row: 1;
     color : #fff;
     margin: 12%;
+    padding: 1%;
     max-height: 500px;
     overflow: auto;
-    text-align: left;
+    text-align: right;
     display: grid; 
     gap: 15px 0;
 }
@@ -118,32 +104,8 @@ section.stickyContainer .sticky{
     grid-column: 1;
     text-align: right;
 }
-.stickyContainer figure{
-    position: relative;
-    display: grid;
-    place-items: center;
-   z-index: 10;
-}
 
-.stickyContainer figure img{
-    height: 80%;
-   height: 800px;
-    width: 80%;
-    max-width: 800px;
-    z-index: 10;
-    object-fit: cover;
-    position: relative;
-}
 
-.stickyContainer .img_left {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.stickyContainer .img_right{
-    grid-column: 1;
-    grid-row: 1;
-}
 
 .sticky .card-content {
     position: absolute;
