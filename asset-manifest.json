@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/JuggerColombia/static/css/main.9465f010.chunk.css",
-    "main.js": "/JuggerColombia/static/js/main.a27e4bbb.chunk.js",
-    "main.js.map": "/JuggerColombia/static/js/main.a27e4bbb.chunk.js.map",
+    "main.css": "/JuggerColombia/static/css/main.a1b8f294.chunk.css",
+    "main.js": "/JuggerColombia/static/js/main.4c80c516.chunk.js",
+    "main.js.map": "/JuggerColombia/static/js/main.4c80c516.chunk.js.map",
     "runtime-main.js": "/JuggerColombia/static/js/runtime-main.aef215c2.js",
     "runtime-main.js.map": "/JuggerColombia/static/js/runtime-main.aef215c2.js.map",
     "static/js/2.8f342434.chunk.js": "/JuggerColombia/static/js/2.8f342434.chunk.js",
     "static/js/2.8f342434.chunk.js.map": "/JuggerColombia/static/js/2.8f342434.chunk.js.map",
     "index.html": "/JuggerColombia/index.html",
-    "precache-manifest.e3a38a326df3ea4ddca8d910cfcda872.js": "/JuggerColombia/precache-manifest.e3a38a326df3ea4ddca8d910cfcda872.js",
+    "precache-manifest.c844814fba2ec857a46544e7b77ac0e2.js": "/JuggerColombia/precache-manifest.c844814fba2ec857a46544e7b77ac0e2.js",
     "service-worker.js": "/JuggerColombia/service-worker.js",
-    "static/css/main.9465f010.chunk.css.map": "/JuggerColombia/static/css/main.9465f010.chunk.css.map",
+    "static/css/main.a1b8f294.chunk.css.map": "/JuggerColombia/static/css/main.a1b8f294.chunk.css.map",
     "static/js/2.8f342434.chunk.js.LICENSE.txt": "/JuggerColombia/static/js/2.8f342434.chunk.js.LICENSE.txt",
     "static/media/flaticon.css": "/JuggerColombia/static/media/Flaticon.1f78ad22.ttf",
     "static/media/jugger_logo.svg": "/JuggerColombia/static/media/jugger_logo.727bb696.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.aef215c2.js",
     "static/js/2.8f342434.chunk.js",
-    "static/css/main.9465f010.chunk.css",
-    "static/js/main.a27e4bbb.chunk.js"
+    "static/css/main.a1b8f294.chunk.css",
+    "static/js/main.4c80c516.chunk.js"
   ]
 }
