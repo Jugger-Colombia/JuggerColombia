@@ -1,8 +1,11 @@
-import React,{useEffect, useRef} from 'react';
+import React,{useEffect, useRef,useState} from 'react';
 import INFO from './data';
+
 import './QQYellow.css'
 import './card.css';
-import { useState } from 'react';
+
+
+
 
 
 const QQYellow = () =>{
@@ -52,8 +55,8 @@ const QQYellow = () =>{
 
 const Card = (props) =>{
     const {cardPlace = ""} = props
-    const bg1 = `url(${process.env.PUBLIC_URL }/frontPage/Yellow1FLT.png)`;
-    const bg2 = `url(${process.env.PUBLIC_URL }/frontPage/Yellow2FLT.png)`;
+    const bg1 = `url(${process.env.PUBLIC_URL }/frontPage/YELLOW1FLT.jpg)`;
+    const bg2 = `url(${process.env.PUBLIC_URL }/frontPage/YELLOW2FLT.png)`;
 
 
     return(
