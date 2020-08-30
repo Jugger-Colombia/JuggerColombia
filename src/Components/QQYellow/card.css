@@ -1,23 +1,28 @@
 
 .card{
-    position: relative;
-    height: 80%;
-    max-height: 800px;
-    width: 80%;
-    max-width: 800px;
+    --perspective: 1000px;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    height: 110%;
+    width: 50%;
+    margin: 2%;
     transform-style: preserve-3d;
-    
     display: grid;
     place-items: center;
     z-index: 10;
+    transition: 1s ease-in;
 }
-.leftCard{
-    grid-column: 1 ;
-    grid-row: 1;
+
+.card.right{
+    left: 50%;
 }
-.rightCard{
-    grid-column: 2 ;
-    grid-row: 2;
+
+.card.right .face.front{
+    transform: perspective(var(--perspective))  rotateY(180deg);
+}
+.card.right .face.back{
+    transform: perspective(var(--perspective)) rotateY(360deg);
 }
 
 
@@ -32,7 +37,8 @@
     place-items: center;
     backface-visibility: hidden;
     transition: 2s ease-in-out;
-    transform: perspective(500px) rotateY(0deg);
+    transform: perspective(var(--perspective)) rotateY(0deg);
+    border-radius: 5%;
 }
 
 .card .face:after{
@@ -45,34 +51,37 @@
     height: 100%;
     z-index: 11;
     transition: 2s ease-in-out;
-    transform: perspective(500px) rotateY(0deg);
+    transform: perspective(var(--perspective)) rotateY(0deg);
 }
 
 .card .face.front{
     background: #ff0;
     color: #fff;    
 }
-.card:hover .face.front{
-   
-    transform: perspective(500px)  rotateY(180deg);
-}
 
 .card .face.back{
     background: #3bc2ff;
     color: #fff;
-    transform: perspective(500px)  rotateY(180deg);
+    transform: perspective(var(--perspective))  rotateY(180deg);
+}
+
+
+/* .card:hover .face.front{
+    transform: perspective(var(--perspective))  rotateY(180deg);
+}
+.card:hover{
+    left:50%;
 }
 
 .card:hover .face.back{
-    transform: perspective(500px) rotateY(360deg);
-}
+    transform: perspective(var(--perspective)) rotateY(360deg);
+} */
 
 .card .face h2{
     font-size: 4em;
     text-transform: uppercase;
     text-align: center;
-    padding: 10%;
-    transform: perspective(500px) translateZ(50px);
+    padding: 15%;
+    transform: perspective(var(--perspective)) translateZ(50px);
     text-shadow: 0 0 10px var(--gray) ,0 0 15px var(--gray) , 0 0 20px var(--gray);
-
 }
