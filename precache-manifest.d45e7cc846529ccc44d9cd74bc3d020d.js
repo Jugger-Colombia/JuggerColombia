@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "767f123a72acc4f4322be34d71df976c",
+    "revision": "8aec5019ea3e9728977c063e765c473d",
     "url": "/JuggerColombia/index.html"
   },
   {
-    "revision": "6d2dfbef9528a0f3953f",
+    "revision": "1eaf3a2f97d5a82ecb74",
     "url": "/JuggerColombia/static/css/main.a1b8f294.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/JuggerColombia/static/js/2.8f342434.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6d2dfbef9528a0f3953f",
-    "url": "/JuggerColombia/static/js/main.5f2f6d93.chunk.js"
+    "revision": "1eaf3a2f97d5a82ecb74",
+    "url": "/JuggerColombia/static/js/main.8faf48ee.chunk.js"
   },
   {
     "revision": "32108a285f7a763267a9",
