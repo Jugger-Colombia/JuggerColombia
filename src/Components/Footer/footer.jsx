@@ -7,9 +7,9 @@ const  Footer = () =>{
         <section className="footer">
             <div className="down-index">
                 <section > 
-                    <a href="#test" className="icon"><i className="flaticon-001-facebook"></i> @Juggercolombia</a>
-                    <a href="#test"  className="icon"><i className="flaticon-002-twitter"></i>@Juggercolombia</a>
-                    <a href="#test"  className="icon"><i className="flaticon-011-instagram"></i> @Jugger.co</a>
+                    <a href="#test" className="icon"><i className="flaticon-001-facebook"></i>@ Juggercolombia</a>
+                    <a href="#test"  className="icon"><i className="flaticon-002-twitter"></i>@ Juggercolombia</a>
+                    <a href="#test"  className="icon"><i className="flaticon-011-instagram"></i> @ Jugger.co</a>
                 </section>
                 <section>
                     <h5 >FAQ</h5>

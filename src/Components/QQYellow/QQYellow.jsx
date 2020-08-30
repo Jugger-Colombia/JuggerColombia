@@ -52,8 +52,8 @@ const QQYellow = () =>{
 
 const Card = (props) =>{
     const {cardPlace = ""} = props
-    const bg1 = `url(${process.env.PUBLIC_URL }/frontPage/Yellow_1_FLT.png)`;
-    const bg2 = `url(${process.env.PUBLIC_URL }/frontPage/Yellow_2_FLT.png)`;
+    const bg1 = `url(${process.env.PUBLIC_URL }/frontPage/Yellow1FLT.png)`;
+    const bg2 = `url(${process.env.PUBLIC_URL }/frontPage/Yellow2FLT.png)`;
 
 
     return(

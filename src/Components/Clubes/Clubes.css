@@ -1,0 +1,6 @@
+section.clubes{
+    position: relative;
+    height: 100vh;
+    background: var(--blue);
+    z-index: 10;
+}

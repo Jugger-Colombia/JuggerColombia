@@ -5,6 +5,7 @@
     height: 200vh;
     position: relative;
     background: var(--dark-gray);
+    margin:  3% 0;
 }
 
 .stickyContainer:before,.stickyContainer:after{

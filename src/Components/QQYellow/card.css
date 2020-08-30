@@ -10,7 +10,7 @@
     transform-style: preserve-3d;
     display: grid;
     place-items: center;
-    z-index: 10;
+    z-index: 12;
     transition: 1s ease-in;
 }
 

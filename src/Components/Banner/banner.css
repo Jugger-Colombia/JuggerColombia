@@ -18,7 +18,7 @@
   width: 100%;
   height: calc(100vh - 50px);
   background-position: center;
-  object-fit: cover;
+  object-fit: contain;
   /* background-size: cover; */
   grid-column: 1;
   grid-row: 1;

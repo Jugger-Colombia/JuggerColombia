@@ -1,7 +1,8 @@
 import React from 'react';
 import NavBar from './Components/NavBar/navBar';
 import Banner from './Components/Banner/banner';
-import QQYellow from './Components/QQYellow/QQYellow'
+import QQYellow from './Components/QQYellow/QQYellow';
+import Clubes from './Components/Clubes/Clubes';
 import Footer from './Components/Footer/footer';
 
 import './JuggerApp.css';
@@ -14,6 +15,7 @@ function JuggerApp() {
 
       <Banner/>
       <QQYellow/>
+      <Clubes/>
 
       <Footer/>
     </div>
