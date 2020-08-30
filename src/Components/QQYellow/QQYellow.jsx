@@ -6,34 +6,37 @@ import { useState } from 'react';
 
 
 const QQYellow = () =>{
-    const [ref,setRef] = useState(null);
-    const [cardPlace, setCardPlace] = useState('');
-    const output = useOnScreen(ref,{ rootMargin: '30%'});
+    const ref = useRef();
+
+    const [cardPlace, setCardPlace] = useState('left');
+    const [lock,setLock] = useState(false);
+    const output = useOnScreen(ref,{ rootMargin: "-20%"});
 
     const QueEsJugger = INFO['jugger'].map(i => <p key={`jugger${i}`}>{i}</p>);
     const QueEsJuggerColombia= INFO['juggerColombia'].map(i => <p  key={`juggerColombia${i}`}>{i}</p>);
-    
+   
+
     useEffect(() =>{
-        const {ref, visible ,threshold} = output ;/**Trigger */ 
-        if (ref){
-            console.log(ref.scrollHeight||null);
-        }
-        if (visible){ 
-            setCardPlace('right')
+        const { visible} = output;
+        if(visible){
+            if(!lock){
+                setCardPlace(cardPlace==='left'?'right':'left')
+                setLock(true);
+            }
         }else{
-            setCardPlace('')
+            setLock(false)
         }
-        console.log({...output});
-    },[ref,output])
+    },[ref,output,cardPlace,lock])
+
 
     return(
-        <section ref={setRef} className="stickyContainer">
+        <section className="stickyContainer" >
             <div className="sticky">
-                <div className="text-container">
-                    <div className="text-right">
+                <div className={`text-container ${cardPlace}`} >
+                    <div className="text text-right">
                         {QueEsJugger}
                     </div>
-                    <div className="text-left">
+                    <div className="text text-left">
                         {QueEsJuggerColombia}
                     </div>
                 </div>
@@ -41,6 +44,8 @@ const QQYellow = () =>{
                     <Card cardPlace={cardPlace}/> 
                 </div>
             </div>
+            <span ref={ref}></span>
+
         </section>
     )
 }
@@ -66,7 +71,7 @@ const Card = (props) =>{
 function useOnScreen (ref,options){
     const [visible, setVisible] = useState(false);
     const [threshold, setThreshold] = useState(0);
-
+   
     useEffect(()=>{
         const observer = new IntersectionObserver(
             ([entry])=>{
@@ -75,16 +80,15 @@ function useOnScreen (ref,options){
             }, options
         );
         
-        if(ref){
-            observer.observe(ref);
+        if(ref.current){
+            observer.observe(ref.current);
         }
-
-        return () =>{
-            if(ref){
-                observer.unobserve(ref);
+       /*  return () =>{
+            if(ref.current){
+                observer.unobserve(ref.current);
             }
-        }
-    },[])
+        } */
+    },[ref,options])
 
     return  {ref, visible ,threshold}
 }
