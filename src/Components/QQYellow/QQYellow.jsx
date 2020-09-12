@@ -62,10 +62,10 @@ const Card = (props) =>{
     return(
         <div className={`card ${cardPlace}`}>
             <div className="face front" style= {{background: bg1, backgroundSize: 'cover'}}>
-                <h2>Que es Jugger ?</h2>
+                <h2>¿ Que es Jugger ?</h2>
             </div>
             <div className="face back" style= {{background: bg2, backgroundSize: 'cover'}}>
-                <h2>Que es Jugger Colombia ?</h2>
+                <h2>¿ Que es Jugger Colombia ?</h2>
             </div>
         </div>
     )

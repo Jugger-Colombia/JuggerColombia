@@ -1,5 +1,4 @@
 .banner{
- 
     position: relative;
     /* max-width: 1200px; */
     /*   margin: auto; */
@@ -10,7 +9,6 @@
     display: grid;
     place-items: center;
     z-index: 10;
-    
   }
 
   
@@ -19,9 +17,9 @@
   height: calc(100vh - 50px);
   background-position: center;
   object-fit: contain;
-  /* background-size: cover; */
   grid-column: 1;
   grid-row: 1;
+  /* background-size: cover; */
   /* background-size: ; */
 }
 

@@ -1,0 +1,26 @@
+
+/* while Modal is open body overflow is hidden*/
+.modal{
+    background: var(--dark-gray2);
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    /* display: none; */
+}
+
+.modal.disable{
+    display: none;
+}
+
+.clubes-modal-gallery{
+    width: 70%;
+    height: 80%;
+    display: grid;
+    grid-template: 70fr 30fr / repeat(5, 1fr);
+    background: white;
+}

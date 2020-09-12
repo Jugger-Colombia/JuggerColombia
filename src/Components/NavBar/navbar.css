@@ -16,7 +16,7 @@ nav{
   align-items: center;
   padding: 1% 5%;
   transition: 0.6s;
-  z-index: 1000;
+  z-index: 100;
   background: var(--gray);
 }
 
