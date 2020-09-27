@@ -17,10 +17,3 @@
     display: none;
 }
 
-.clubes-modal-gallery{
-    width: 70%;
-    height: 80%;
-    display: grid;
-    grid-template: 70fr 30fr / repeat(5, 1fr);
-    background: white;
-}

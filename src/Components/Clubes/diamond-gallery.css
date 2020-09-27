@@ -15,7 +15,7 @@
     place-items: center;
     grid-row: var(--row) / span 2 ;
     grid-column: var(--col) / span 2 ;
-    filter: drop-shadow(-1px 10px 3px #1b1b1b);
+    filter: drop-shadow(2px 20px 10px #1b1b1b);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -24,8 +24,8 @@
 
 .diamond-grid .item-shadow .diamond-item:before ,.diamond-grid .item-shadow .diamond-item:after{
     content: "";
-    width:100%;
-    height: 50%;
+    width:50%;
+    height: 20%;
     position: absolute;
     background: var(--dark-blue);
     z-index: 0;
@@ -36,32 +36,36 @@
 
 
 .diamond-grid .item-shadow .diamond-item:before{
-    top: -30%;
-    left: 0;
+    top: -10%;
+    left: 25%;
 }
 
 .diamond-grid .item-shadow .diamond-item:after {
-    bottom: -30%;
-    left: 0;
+    bottom: -10%;
+    left: 25%;
 }
 
 
 .diamond-grid .item-shadow .diamond-item{
     clip-path: polygon( 0 50% ,50% 0,100% 50%, 50% 100%);
     padding: 25%;
-    background: white;
+    background: #ffffff;
     transition: 0.5s ;
 }
-.diamond-grid .item-shadow .diamond-item:hover{
-    padding: 5%;
+ .diamond-grid .item-shadow .diamond-item:hover{
+    padding: 10%;
+    cursor: pointer;
+    /* transform: rotate(45deg); */
 }
 
 .diamond-grid .item-shadow .diamond-item:hover:after{
-    bottom: -10%;
+    bottom: -5%;
+}
+.diamond-grid .item-shadow .diamond-item:hover:before{
+    top: -5%;
 }
 
-
 .diamond-grid .item-shadow .diamond-item-logo{
-    width: 100%;
-    
+    width: 100%;   
+    transition: 0.5s ;
 }
