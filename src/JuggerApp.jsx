@@ -4,22 +4,25 @@ import Banner from './Components/Banner/banner';
 import QQYellow from './Components/QQYellow/QQYellow';
 import Clubes from './Components/Clubes/Clubes';
 import Footer from './Components/Footer/footer';
+import Router from './ROUTES😊/Router';
 
 import './JuggerApp.css';
 import './SocialMedia/font/flaticon.css';
 
 function JuggerApp() {
-  return (
-    <div className="App">
-      <NavBar/>
+	return (
+		<div className="App">
+			<Router></Router>
+
+			{/*  <NavBar/>
 
       <Banner/>
       <QQYellow/>
       <Clubes/>
 
-      <Footer/>
-    </div>
-  );
+      <Footer/> */}
+		</div>
+	);
 }
 
 export default JuggerApp;

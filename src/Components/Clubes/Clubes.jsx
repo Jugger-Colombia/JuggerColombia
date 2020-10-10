@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from '../REGULARS/Modal/Modal';
 import ClubessModalGallery from './ModalGallery/ModalGallery';
 
@@ -9,19 +9,27 @@ import './Clubes.css';
 import './diamond-gallery.css';
 
 const Clubes = () => {
-    const [selectedClub, setSelectedClub] = useState(0);
+    const [selectedClub, setSelectedClub] = useState("lycaon pictus");
 
-
+    useEffect(() => {
+        const diamondItems = document.querySelectorAll('.diamond-item');
+        diamondItems.forEach((item) => {
+            console.log(item);
+            item.addEventListener("mouseenter", (event) => {
+                console.log("enter");
+            });
+        })
+    }, [])
     return (
         <section className='clubes'>
             <h1 className='heading-clubes'>Clubes Activos</h1>
 
             <div className="diamond-grid">
-                {tumbItems()}
+                {tumbItems({ selectedClub, setSelectedClub })}
             </div>
 
             <Modal>
-                <ClubessModalGallery />
+                <ClubessModalGallery {...{ selectedClub, setSelectedClub }} />
             </Modal>
         </section>
     )
@@ -33,35 +41,38 @@ const positions = [
     { col: 2, row: 2 },
     { col: 4, row: 2 },
     /*{col:7 ,row:1},
-    {col:6 ,row:2},
-    {col: 3,row:3},
-    {col: 1,row:3},
-    {col: 5,row:3},
-    {col: 7,row:3}, */
+            {col:6 ,row:2},
+            {col: 3,row:3},
+            {col: 1,row:3},
+            {col: 5,row:3},
+            {col: 7,row:3}, */
 ]
-const tumbItems = () => {
-    const handleClick = (e, name) => {
+const tumbItems = ({ selectedClub, setSelectedClub }) => {
+
+    const handleClick = (e, clubObj) => {
         const body = document.querySelector('body');
         const modal = document.querySelector('.modal');
         modal.classList.remove('disable');
         body.classList.add('modal-open');
-
-        console.log(e.target, name);
+        setSelectedClub(clubObj.club)
+        console.log(e.target, clubObj);
     }
-    const tumbItems = CLUBES.map((club, i) => {
 
+
+    const tumbItems = Object.keys(CLUBES).map((club, i) => {
+        const { name, logo } = CLUBES[club];
         return (
             <div
                 className="item-shadow"
-                onClick={e => handleClick(e, { name: club.name, i })}
+                onClick={e => handleClick(e, { name: name, club })}
                 style={{ "--row": positions[i].row, "--col": positions[i].col }}
-                key={`${club.name}${i}`}
+                key={`${name}${i}`}
             >
                 <div className="diamond-item" >
                     {/*  {club.name} */}
                     <img
                         className="diamond-item-logo"
-                        src={club.logo} alt=""
+                        src={logo} alt=""
                     />
                 </div>
             </div>
