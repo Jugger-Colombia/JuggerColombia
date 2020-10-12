@@ -4,6 +4,7 @@ import "./footer.css";
 const instagram = "https://www.instagram.com/jugger.co/";
 const facebook = "https://www.facebook.com/JuggerColombia";
 const twitter = "";
+const version = "av0.0.1"
 
 const Footer = () => {
     return (
@@ -36,7 +37,7 @@ const Footer = () => {
 
             </div>
             <h5 className="rights">
-                {"Jugger Colombia 2020 - Todos los derechos reservados / Sitio diseñador por: MajoAlvarez-Diseño y desarrollado por: Marca de Moggy"}
+                {`Jugger Colombia 2020 - Todos los derechos reservados / Sitio diseñador por: MajoAlvarez-Diseño y desarrollado por: Marca de Moggy -${version}`}
             </h5>
         </section>
     )
