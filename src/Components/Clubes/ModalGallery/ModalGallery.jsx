@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 
-import CLUBES from '../data';
+import { CLUBES, access } from '../data';
 
 import './clubes-modal-gallery.css'
 
 
 function ClubsModalGallery(props) {
     const { selectedClub, setSelectedClub } = props;
-
     const handleClick = (e, name) => {
-        console.log(e.target, name);
         setSelectedClub(name)
     }
 
-    const slides = Object.keys(CLUBES).map((club, i) => {
+    /* const slides = Object.keys(CLUBES).map((club, i) => { */
+    const slides = access.map((club, i) => {
         const { name, logo } = CLUBES[club];
         return (
             <img
@@ -28,7 +27,7 @@ function ClubsModalGallery(props) {
 
     const card = (club) => {
         const { name, type, logo, description, responsable, email, contact, socialmedia } = CLUBES[club];
-        const iconsSocial = socialmedia.map((social, i) => iconPicker(social.type))
+        const iconsSocial = socialmedia.map((social, i) => iconPicker({ ...social, i }));
 
         return (
             <section className="gallery-main-card">
@@ -42,7 +41,7 @@ function ClubsModalGallery(props) {
                     <div className="contact">
                         <h3 ><span>{"Responsable :"}</span> {responsable}</h3>
                         <h3 ><span>{"email :"}</span> {email}</h3>
-                        <h3 ><span>{"contac :"}</span> {contact}</h3>
+                        <h3 ><span>{"contac :"}</span> {contact} </h3>
                     </div>
 
                 </div>
@@ -56,10 +55,10 @@ function ClubsModalGallery(props) {
     return (
         <div className="clubes-modal-gallery">
             {card(selectedClub)}
-            {/*  {card(Object.keys(CLUBES)[1])} */}
+
             <div className="gallery-controls">
                 <h3>◀</h3>
-                <h1>CLUB</h1>
+                <h1>{CLUBES[selectedClub].name}</h1>
                 <h3>▶</h3>
             </div>
             <div className="gallery-tumb-line">
@@ -71,16 +70,22 @@ function ClubsModalGallery(props) {
     )
 }
 
-const iconPicker = (type) => {
-    const icons = {
-        facebook: <a key={"icon-1"} className={"icon"} href="#test" > <i className="flaticon-001-facebook"></i></a >,
-        twitter: <a key={"icon-2"} className={"icon"} href="#test"><i className="flaticon-002-twitter"></i></a>,
-        instagram: <a key={"icon-3"} className={"icon"} href="#test"><i className="flaticon-011-instagram"></i></a>,
-        youtube: <a key={"icon-4"} className={"icon"} href="#test"><i className="flaticon-008-youtube"></i></a>,
-        linkedin: <a key={"icon-5"} className={"icon"} href="#test"><i className="flaticon-010-linkedin"></i></a>,
-        whatsapp: <a key={"icon-6"} className={"icon"} href="#test"><i className="flaticon-003-whatsapp"></i></a>,
-    }
-    return icons[type];
+
+const iconsClass = {
+    facebook: "flaticon-001-facebook",
+    twitter: "flaticon-002-twitter",
+    instagram: "flaticon-011-instagram",
+    youtube: "flaticon-008-youtube",
+    linkedin: "flaticon-010-linkedin",
+    whatsapp: "flaticon-003-whatsapp"
 }
+
+const iconPicker = (config) => {
+    const { type, i, contact } = config;
+    const component = <a key={`icon-${i}`} className={"icon"} href={contact} > <i className={iconsClass[type]}></i></a >
+    return component;
+}
+
+
 
 export default ClubsModalGallery;

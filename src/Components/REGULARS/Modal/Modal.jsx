@@ -19,8 +19,8 @@ const Modal = (props) => {
     }, [])
     return (
         <div
-            className="modal "
-        /* className="modal disable" */
+            /* className="modal " */
+            className="modal disable"
         /*  onClick={() => handleCloseModal()} */
         >
             {props.children}

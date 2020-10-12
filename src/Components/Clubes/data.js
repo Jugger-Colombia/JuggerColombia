@@ -1,5 +1,10 @@
+const access = [
+    "lycaon",
+    "quynza"
+]
+
 const CLUBES = {
-    "lycaon pictus": {
+    "lycaon": {
         name: "Lycaon Pictus ",
         type: "Jugger Club",
         logo: `${process.env.PUBLIC_URL}/logos/Lycaon.png`,
@@ -8,8 +13,8 @@ const CLUBES = {
         email: "lycaonpictus@gmail.com",
         contact: " 322-3662053",
         socialmedia: [
-            { type: "facebook", contact: "www.facebook.com/LycaonPictusJuggerTeam" },
-            { type: "instagram", contact: "www.instagram.com/lycaonpictus_" },
+            { type: "facebook", contact: "http://www.facebook.com/LycaonPictusJuggerTeam" },
+            { type: "instagram", contact: "http://www.instagram.com/lycaonpictus_" },
 
         ]
     },
@@ -23,9 +28,9 @@ const CLUBES = {
         email: "titansjuggerclub@gmail.com",
         contact: ["321-9027905", " 300-4147645"],
         socialmedia: [
-            { type: "facebook", contact: "www.facebook.com/Titansjuggerclub" },
+            { type: "facebook", contact: "http://www.facebook.com/Titansjuggerclub" },
             { type: "tiktok", contact: "https://vm.tiktok.com/ZSPFRBvj/" },
-            { type: "instagram", contact: "www.instagram.com/titansjuggerclub" },
+            { type: "instagram", contact: "http://www.instagram.com/titansjuggerclub" },
         ]
 
     },
@@ -59,8 +64,8 @@ const CLUBES = {
     "quynza": {
         name: "Quynza",
         type: "Jugger Club",
-        logo: `${process.env.PUBLIC_URL}/logos/DragonFLy.jpg`,
-        description: " Descripción: Sueña en grande, corre como nunca, deja todo de ti en el campo, veras que los obstáculos serán cada vez más pequeños y la victoria colosal; el poder de ser quynza se siente en la mente, cuerpo y corazón; somos Quynza jugger club y la aventura empieza en 3,2,1 ¡Jugger!",
+        logo: `${process.env.PUBLIC_URL}/logos/Quynza.svg`,
+        description: "Sueña en grande, corre como nunca, deja todo de ti en el campo, veras que los obstáculos serán cada vez más pequeños y la victoria colosal; el poder de ser quynza se siente en la mente, cuerpo y corazón; somos Quynza jugger club y la aventura empieza en 3,2,1 ¡Jugger!",
         responsable: "Jenny Gil ",
         email: "quynzajuggerclub@gmail.com",
         contact: "312-3918610",
@@ -70,4 +75,4 @@ const CLUBES = {
     },
 }
 
-export default CLUBES;
+export { CLUBES, access };

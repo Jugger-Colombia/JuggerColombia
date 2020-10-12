@@ -1,50 +1,51 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import logo from "../jugger_logo.svg"
 import "./navbar.css";
 
 const NAVS = {
-    nosotros: "#nosotros" ,
-    clubes: "#clubes" ,
-    entrenamientos: "#entrenamientos" ,
-    eventos: "#eventos" ,
-    contacto: "#contacto" ,
-} 
+    nosotros: "#nosotros",
+    clubes: "#clubes",
+    /* entrenamientos: "#entrenamientos",
+    eventos: "#eventos",
+    contacto: "#contacto", */
+}
 
 
-const NavBar = () =>{
+const NavBar = () => {
 
     var navs = Object.keys(NAVS);
     var navs_list = navs.map(
-        (i)=> ( <NavBarItem name={i}  key={i}/>)
+        (i) => (<NavBarItem name={i} key={i} />)
     )
 
-    useEffect(() =>{
-        window.addEventListener("scroll",() =>{
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
             var nav = document.querySelector("nav");
             nav.classList.toggle("sticky", window.scrollY > 0);
             /* console.log(window.scrollY); */
         })
-    },[])
+    }, [])
 
-    return(
+    return (
         <header className="App-header">
             <nav>
                 <div className="jugger_logo">
                     <figure >
-                        <img  src={logo} alt="Jugger Colombia Logo"/>
+                        <img src={logo} alt="Jugger Colombia Logo" />
                     </figure>
-                    <a href="#test" className="logo">JUGGER COLOMBIA</a>
+                    <a href="#banner" className="logo">JUGGER COLOMBIA</a>
                 </div>
+                <div ></div>{/* Separador */}
                 <NavBarItemsList >
                     {navs_list}
                 </NavBarItemsList>
-            </nav>    
+            </nav>
         </header>
     )
 }
 
-const NavBarItemsList  = (props) =>{
-    
+const NavBarItemsList = (props) => {
+
     return (
         <ul>
             {props.children}
@@ -55,7 +56,7 @@ const NavBarItemsList  = (props) =>{
 const NavBarItem = (props) => {
 
     return (
-        <li> 
+        <li>
             <a href={`#${props.name}`}> {props.name}</a>
         </li>
     )
@@ -63,6 +64,6 @@ const NavBarItem = (props) => {
 
 
 NavBarItem.defaultProps = {
-    name: "HOLI"   
+    name: "HOLI"
 }
 export default NavBar;
