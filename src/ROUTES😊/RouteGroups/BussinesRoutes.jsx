@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import HomeView from '../../VIEWS📺/HomeView/HomeView';
 
-const path = '';
+const path = '/JuggerColombia';
 
 const DummysRoutes = {
   [`${path}/home`]: {
@@ -14,7 +14,7 @@ const DummysRoutes = {
     ),
     authFail: () => (
       <>
-        <Redirect to={{ pathname: '/home' }} />
+        <Redirect to={{ pathname: `${path}/home` }} />
       </>
     ),
   },

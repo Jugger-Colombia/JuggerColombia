@@ -6,7 +6,7 @@ import BussinesRoutes from "./RouteGroups/BussinesRoutes";
 import DummysRoutes from "./RouteGroups/DummysRoutes";
 
 
-export var path = ''
+export var path = '/JuggerColombia'
 
 export const RoutesList = [
 
@@ -14,15 +14,17 @@ export const RoutesList = [
     ...Object.keys(BussinesRoutes),
     ...Object.keys(DummysRoutes),
     `${path}`,
+    ``,
 ];
 
 export const Config = {
+    [``]: {
 
-    [`${path}`]: {
+        /*  [`${path}`]: { */
 
         routeName: "Defaul",
-        authSuccess: () => (<Redirect to={{ pathname: "/home" }} />),
-        authFail: () => (<Redirect to={{ pathname: "/home" }} />),
+        authSuccess: () => (<Redirect to={{ pathname: `${path}/home` }} />),
+        authFail: () => (<Redirect to={{ pathname: `${path}/home` }} />),
     },
     /*
    [`${path}/home`]: {

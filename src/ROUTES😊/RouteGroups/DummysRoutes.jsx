@@ -1,6 +1,6 @@
 import React from 'react';
 
-var path = '';
+var path = 'JuggerColombia';
 
 const DummysRoutes = {
 
