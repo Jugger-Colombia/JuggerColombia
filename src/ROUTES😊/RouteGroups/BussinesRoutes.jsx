@@ -5,7 +5,7 @@ import HomeView from '../../VIEWS📺/HomeView/HomeView';
 const path = '/JuggerColombia';
 
 const DummysRoutes = {
-  [`${path}/home`]: {
+  [`${path}/`]: {
     routeName: 'View PDF Validator ',
     authSuccess: () => (
       <>
@@ -14,7 +14,7 @@ const DummysRoutes = {
     ),
     authFail: () => (
       <>
-        <Redirect to={{ pathname: `${path}/home` }} />
+        <Redirect to={{ pathname: `${path}/` }} />
       </>
     ),
   },

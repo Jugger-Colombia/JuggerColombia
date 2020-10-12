@@ -57,9 +57,9 @@ function ClubsModalGallery(props) {
             {card(selectedClub)}
 
             <div className="gallery-controls">
-                <h3>◀</h3>
+                <h3>{/* ◀ */}</h3>
                 <h1>{CLUBES[selectedClub].name}</h1>
-                <h3>▶</h3>
+                <h3>{/* ▶ */}</h3>
             </div>
             <div className="gallery-tumb-line">
                 <div className="gallery-tumb-line-logos">

@@ -23,16 +23,16 @@ export const Config = {
         /*  [`${path}`]: { */
 
         routeName: "Defaul",
-        authSuccess: () => (<Redirect to={{ pathname: `${path}/home` }} />),
-        authFail: () => (<Redirect to={{ pathname: `${path}/home` }} />),
+        authSuccess: () => (<Redirect to={{ pathname: `${path}/` }} />),
+        authFail: () => (<Redirect to={{ pathname: `${path}/` }} />),
     },
     [`${path}`]: {
 
         /*  [`${path}`]: { */
 
         routeName: "Defaul",
-        authSuccess: () => (<Redirect to={{ pathname: `${path}/home` }} />),
-        authFail: () => (<Redirect to={{ pathname: `${path}/home` }} />),
+        authSuccess: () => (<Redirect to={{ pathname: `${path}/` }} />),
+        authFail: () => (<Redirect to={{ pathname: `${path}/` }} />),
     },
     /*
    [`${path}/home`]: {
