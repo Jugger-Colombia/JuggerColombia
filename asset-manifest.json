@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/JuggerColombia/static/css/main.c147d52d.chunk.css",
-    "main.js": "/JuggerColombia/static/js/main.4560eca1.chunk.js",
-    "main.js.map": "/JuggerColombia/static/js/main.4560eca1.chunk.js.map",
+    "main.js": "/JuggerColombia/static/js/main.f46d4afc.chunk.js",
+    "main.js.map": "/JuggerColombia/static/js/main.f46d4afc.chunk.js.map",
     "runtime-main.js": "/JuggerColombia/static/js/runtime-main.aef215c2.js",
     "runtime-main.js.map": "/JuggerColombia/static/js/runtime-main.aef215c2.js.map",
     "static/js/2.50bc1cf0.chunk.js": "/JuggerColombia/static/js/2.50bc1cf0.chunk.js",
     "static/js/2.50bc1cf0.chunk.js.map": "/JuggerColombia/static/js/2.50bc1cf0.chunk.js.map",
     "index.html": "/JuggerColombia/index.html",
-    "precache-manifest.c9ce492c0726d801b8fce03afc965146.js": "/JuggerColombia/precache-manifest.c9ce492c0726d801b8fce03afc965146.js",
+    "precache-manifest.a7a492aaccd64cdc1e5b78fdc4b44a0f.js": "/JuggerColombia/precache-manifest.a7a492aaccd64cdc1e5b78fdc4b44a0f.js",
     "service-worker.js": "/JuggerColombia/service-worker.js",
     "static/css/main.c147d52d.chunk.css.map": "/JuggerColombia/static/css/main.c147d52d.chunk.css.map",
     "static/js/2.50bc1cf0.chunk.js.LICENSE.txt": "/JuggerColombia/static/js/2.50bc1cf0.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.aef215c2.js",
     "static/js/2.50bc1cf0.chunk.js",
     "static/css/main.c147d52d.chunk.css",
-    "static/js/main.4560eca1.chunk.js"
+    "static/js/main.f46d4afc.chunk.js"
   ]
 }
