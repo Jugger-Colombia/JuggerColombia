@@ -1,19 +1,21 @@
 import React from 'react';
 import logo from "../jugger_logo.svg"
 import "./footer.css";
+
+const version = "av0.0.1"
+
 const instagram = "https://www.instagram.com/jugger.co/";
 const facebook = "https://www.facebook.com/JuggerColombia";
-const twitter = "";
-const version = "av0.0.1"
+const twitter = "https://twitter.com/JuggerColombia?s=09";
 
 const Footer = () => {
     return (
         <section className="footer">
             <div className="down-index">
                 <section >
-                    <a href={instagram} className="icon"><i className="flaticon-001-facebook"></i>@ Juggercolombia</a>
-                    <a href={facebook} className="icon"><i className="flaticon-002-twitter"></i>@ Juggercolombia</a>
-                    <a href={twitter} className="icon"><i className="flaticon-011-instagram"></i> @ Jugger.co</a>
+                    <a href={facebook} className="icon"><i className="flaticon-001-facebook"></i>@ Juggercolombia</a>
+                    <a href={twitter} className="icon"><i className="flaticon-002-twitter"></i>@ Juggercolombia</a>
+                    <a href={instagram} className="icon"><i className="flaticon-011-instagram"></i> @ Jugger.co</a>
                 </section>
                 <section>
                     <h5 >FAQ</h5>
