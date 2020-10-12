@@ -7,6 +7,7 @@ const version = "av0.0.1"
 const instagram = "https://www.instagram.com/jugger.co/";
 const facebook = "https://www.facebook.com/JuggerColombia";
 const twitter = "https://twitter.com/JuggerColombia?s=09";
+const juggerCOEmail = "email: info@jugger.co";
 
 const Footer = () => {
     return (
@@ -18,16 +19,16 @@ const Footer = () => {
                     <a href={instagram} className="icon"><i className="flaticon-011-instagram"></i> @ Jugger.co</a>
                 </section>
                 <section>
-                    <h5 >FAQ</h5>
+                    {/*   <h5 >FAQ</h5>
                     <h5 >Reglamento & Otros Documentos </h5>
-                    <h5 >Politicas de Privacidad</h5>
+                    <h5 >Politicas de Privacidad</h5> */}
                 </section>
                 <section>
                     <h4 >JUGGER COLOMBIA</h4>
                     <h6 >Dirección: Carrera 52 # 74-22</h6>
                     <h6 >Bogotá D.C - Colombia</h6>
                     <h6 >Teléfonos: 305 3680606 - 305 7128436</h6>
-                    <h6 >www.jugger.co - juggercolombia@gmail.com </h6>
+                    <h6 >{juggerCOEmail}</h6>
                 </section>
                 <section>
                     <div className="jugger_logo">

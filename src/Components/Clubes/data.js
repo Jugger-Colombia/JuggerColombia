@@ -10,8 +10,8 @@ const CLUBES = {
         logo: `${process.env.PUBLIC_URL}/logos/Lycaon.png`,
         description: " Somos la Manada más competitiva de Jugger, si Quieres Conoser tus limites y sentir que cada entrenamiento es un Desafio te invitamos a unirtenos para Buscar  Juntos la Victoria.",
         responsable: "Juan Pablo Bedoya ",
-        email: "lycaonpictus@gmail.com",
-        contact: " 322-3662053",
+        email: "lycaonpictusjuggerclub@jugger.co",
+        contact: "322-3662053",
         socialmedia: [
             { type: "facebook", contact: "http://www.facebook.com/LycaonPictusJuggerTeam" },
             { type: "instagram", contact: "http://www.instagram.com/lycaonpictus_" },
@@ -67,7 +67,7 @@ const CLUBES = {
         logo: `${process.env.PUBLIC_URL}/logos/Quynza.svg`,
         description: "Sueña en grande, corre como nunca, deja todo de ti en el campo, veras que los obstáculos serán cada vez más pequeños y la victoria colosal; el poder de ser quynza se siente en la mente, cuerpo y corazón; somos Quynza jugger club y la aventura empieza en 3,2,1 ¡Jugger!",
         responsable: "Jenny Gil ",
-        email: "quynzajuggerclub@gmail.com",
+        email: "quynzajuggerclub@jugger.co",
         contact: "312-3918610",
         socialmedia: [
 
