@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8aec5019ea3e9728977c063e765c473d",
+    "revision": "4f586b21fd96b9eda8d23b87faa539eb",
     "url": "/JuggerColombia/index.html"
   },
   {
-    "revision": "1eaf3a2f97d5a82ecb74",
-    "url": "/JuggerColombia/static/css/main.a1b8f294.chunk.css"
+    "revision": "90af1e6054f27a9b775d",
+    "url": "/JuggerColombia/static/css/main.c147d52d.chunk.css"
   },
   {
-    "revision": "a7668c4e0dcaa1e443d5",
-    "url": "/JuggerColombia/static/js/2.8f342434.chunk.js"
+    "revision": "90d988ad704384c413bd",
+    "url": "/JuggerColombia/static/js/2.50bc1cf0.chunk.js"
   },
   {
-    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/JuggerColombia/static/js/2.8f342434.chunk.js.LICENSE.txt"
+    "revision": "c64c486544348f10a6d6c716950bc223",
+    "url": "/JuggerColombia/static/js/2.50bc1cf0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1eaf3a2f97d5a82ecb74",
-    "url": "/JuggerColombia/static/js/main.8faf48ee.chunk.js"
+    "revision": "90af1e6054f27a9b775d",
+    "url": "/JuggerColombia/static/js/main.4560eca1.chunk.js"
   },
   {
     "revision": "32108a285f7a763267a9",
