@@ -1,0 +1,4 @@
+.documentos-view{
+    display: grid ; 
+    grid-template-rows: 0px 70vh 30vh  1fr ; 
+}

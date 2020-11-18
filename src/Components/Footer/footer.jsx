@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from "../jugger_logo.svg"
 import "./footer.css";
 
-const version = "av0.0.1"
+const version = "av0.0.2"
 
 const instagram = "https://www.instagram.com/jugger.co/";
 const facebook = "https://www.facebook.com/JuggerColombia";
@@ -33,7 +32,7 @@ const Footer = () => {
                 <section>
                     <div className="jugger_logo">
                         <figure >
-                            <img src={logo} alt="Jugger Colombia Logo" />
+                            <img src={`${process.env.PUBLIC_URL}/jugger_logo.svg`} alt="Jugger Colombia Logo" />
                         </figure>
                     </div>
                 </section>

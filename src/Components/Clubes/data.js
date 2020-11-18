@@ -1,6 +1,7 @@
 const access = [
     "lycaon",
-    "quynza"
+    "quynza",
+    "titans"
 ]
 
 const CLUBES = {
@@ -22,7 +23,7 @@ const CLUBES = {
     "titans": {
         name: "Titans",
         type: "Jugger Club",
-        logo: `${process.env.PUBLIC_URL}/logos/Titans.png`,
+        logo: `${process.env.PUBLIC_URL}/logos/Titans.svg`,
         description: "Titans Jugger Club es actualmente el club más joven dentro de la comunidad, destacando su disciplina, unión y organización, cuenta así con tres equipos competitivos y solo está a la espera de que seas parte de esta gran familia. ",
         responsable: "Mateo Avilan",
         email: "titansjuggerclub@gmail.com",

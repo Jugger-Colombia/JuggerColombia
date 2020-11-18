@@ -8,7 +8,7 @@ import Footer from '../../Components/Footer/footer';
 
 function HomeView() {
     return (
-        <div className="App">
+        <div className="home-view">
             <NavBar />
 
             <Banner />

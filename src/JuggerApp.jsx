@@ -11,17 +11,7 @@ import './SocialMedia/font/flaticon.css';
 
 function JuggerApp() {
 	return (
-		<div className="App">
-			<Router></Router>
-
-			{/*  <NavBar/>
-
-      <Banner/>
-      <QQYellow/>
-      <Clubes/>
-
-      <Footer/> */}
-		</div>
+		<Router></Router>
 	);
 }
 

@@ -6,11 +6,10 @@ import BussinesRoutes from "./RouteGroups/BussinesRoutes";
 import DummysRoutes from "./RouteGroups/DummysRoutes";
 
 
-export var path = '/JuggerColombia'
+export var path = '/'
 
 export const RoutesList = [
 
-    /*   `${path}/validator` */
     ...Object.keys(BussinesRoutes),
     ...Object.keys(DummysRoutes),
     `${path}`,
@@ -18,28 +17,12 @@ export const RoutesList = [
 ];
 
 export const Config = {
-    [``]: {
+    [`/`]: {
         /*  [`${path}`]: { */
         routeName: "Defaul",
-        authSuccess: () => (<Redirect to={{ pathname: `${path}/` }} />),
-        authFail: () => (<Redirect to={{ pathname: `${path}/` }} />),
+        authSuccess: () => (<Redirect to={{ pathname: `${path}home` }} />),
+        authFail: () => (<Redirect to={{ pathname: `${path}home` }} />),
     },
-    [`${path}`]: {
-        /*  [`${path}`]: { */
-        routeName: "Defaul",
-        authSuccess: () => (<Redirect to={{ pathname: `${path}/` }} />),
-        authFail: () => (<Redirect to={{ pathname: `${path}/` }} />),
-    },
-    /*
-   [`${path}/home`]: {
-       routeName: "Home",
-       authSuccess: AppHomeWithSideBar,
-       //authSuccess: (props) => PermissionBuilder(AppHomeWithSideBar)(props),
-       authFail: () => (<Redirect to={{ pathname: "/login" }} />),
-   },
-  
-   ...AdminRoutes,
-   */
     ...DummysRoutes,
     ...BussinesRoutes
 }

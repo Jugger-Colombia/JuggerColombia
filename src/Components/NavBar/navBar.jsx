@@ -3,8 +3,9 @@ import logo from "../jugger_logo.svg"
 import "./navbar.css";
 
 const NAVS = {
-    nosotros: "#nosotros",
-    clubes: "#clubes",
+    nosotros: "/home#nosotros",
+    clubes: "/home#clubes",
+    documentos: "/documentos"
     /* entrenamientos: "#entrenamientos",
     eventos: "#eventos",
     contacto: "#contacto", */
@@ -33,7 +34,7 @@ const NavBar = () => {
                     <figure >
                         <img src={logo} alt="Jugger Colombia Logo" />
                     </figure>
-                    <a href="#banner" className="logo">JUGGER COLOMBIA</a>
+                    <a href="/home#banner" className="logo">JUGGER COLOMBIA</a>
                 </div>
                 <div ></div>{/* Separador */}
                 <NavBarItemsList >
@@ -57,7 +58,7 @@ const NavBarItem = (props) => {
 
     return (
         <li>
-            <a href={`#${props.name}`}> {props.name}</a>
+            <a href={`${NAVS[props.name]}`}> {props.name}</a>
         </li>
     )
 }
