@@ -3,7 +3,7 @@
     padding: 20px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(6 , 1fr);
+    grid-template-columns: repeat(7 , 1fr);
     align-items: center;
     gap: 20px
 }
@@ -74,6 +74,24 @@
  .box.active .icon{
     box-shadow: 0 0 0 400px var(--dark-blue);
     background: var(--dark-blue);
+
+}
+
+.box .icon.yellow{
+    box-shadow: 0 0 0 0 var(--yellow);
+    background: var(--yellow);
+
+}
+
+ .box.active:hover .icon.yellow{
+    box-shadow: 0 0 0 400px var(--red);
+    background: var(--red);
+
+}
+
+ .box.active .icon.yellow {
+    box-shadow: 0 0 0 400px var(--dark-yellow);
+    background: var(--dark-yellow);
 
 }
 

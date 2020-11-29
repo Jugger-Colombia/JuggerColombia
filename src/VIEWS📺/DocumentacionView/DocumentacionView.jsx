@@ -5,6 +5,8 @@ import PdfViwer from '../../Components/PdfViwer/PdfViwer';
 import DocsMenu from '../../Components/DocsMenu/DocsMenu'
 import Footer from '../../Components/Footer/footer';
 import { BlueBanner } from '../../Components/Banner/banner';
+import Modal from "../../Components/REGULARS/Modal/Modal";
+
 import './DocumentacionView.css'
 
 const DocumentationView = (props) => {
@@ -16,8 +18,9 @@ const DocumentationView = (props) => {
 
             <DocsMenu />
 
-
-            {/*  <PdfViwer /> */}
+            <Modal>
+                <PdfViwer />
+            </Modal>
 
             <Footer />
         </div>
